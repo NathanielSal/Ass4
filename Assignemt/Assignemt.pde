@@ -2,7 +2,7 @@ PImage Dealer;
 void setup(){
   size(400,400);
   background(0);
-  Dealer = loadImage("PokerMan.png");
+  Dealer = loadImage("dealer.png");
   float x = 3;
   float y = 10;
   for( int i=0; i<180; i++){
@@ -19,8 +19,9 @@ void setup(){
 }
 
 void draw(){
-fill(180,130,240);
+fill(53,100,75);
+image(Dealer, 0,30);
 rect(-1,260, 401,401);
-image(Dealer, 200,100);
+
   
 }
