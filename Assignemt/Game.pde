@@ -23,11 +23,12 @@ class Game{
    
   }
 
-  void GameRunning(){
+  void GameStart(){
    background(0); 
-
-
-
+   GameRunning = true;
+   image(Dealer,10,40);
+   fill(53,101,77);
+   rect(-1,255, 401,401);
   }
 
 
