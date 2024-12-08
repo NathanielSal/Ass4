@@ -10,15 +10,16 @@ void setup(){
   Dealer = loadImage("dealer.png");
   
 }
+void draw(){
+  
+}
 
- void mouseClicked(){
+ void mousePressed(){
    println("jack");
    //see if you clicked button in main menu
    if (game.MenuUp == true && mouseX>145 && mouseX<255 && mouseY>180 && mouseY<225 ){
       game.GameRunning();
       
    }
-   else{
-     println("f");
-   }
+
  }

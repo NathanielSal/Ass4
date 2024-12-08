@@ -13,16 +13,19 @@ class Game{
    
    PlayButton = loadImage("Play.png");
    Dealer = loadImage("dealer.png");
+   
   }
   
   
   void menu(){
     background(255);
     image(PlayButton,102,102);
+   
   }
 
   void GameRunning(){
    background(0); 
+
 
 
   }
