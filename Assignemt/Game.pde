@@ -2,6 +2,7 @@ class Game{
   boolean MenuUp;
   boolean GameRunning;
   boolean GameEnd;
+  boolean dealt;
   
   PImage PlayButton;
   PImage Dealer;
@@ -10,6 +11,7 @@ class Game{
    MenuUp = true;
    GameRunning = false;
    GameEnd = false;
+   dealt = false;
    
    PlayButton = loadImage("Play.png");
    Dealer = loadImage("dealer.png");
@@ -29,6 +31,9 @@ class Game{
    image(Dealer,10,40);
    fill(53,101,77);
    rect(-1,255, 401,401);
+   
+   //deal buttom
+   image(PlayButton,102,202);
   }
 
 

@@ -25,10 +25,11 @@ void setup(){
   
 }
 void draw(){
+ if (game.dealt == true){ 
   for (Deck C : CardList){
-    C.display();
+    C.deal();
   }
-  
+}
 }
 
  void mousePressed(){
@@ -36,7 +37,8 @@ void draw(){
    if (game.MenuUp == true && mouseX>145 && mouseX<255 && mouseY>180 && mouseY<225 ){
       game.GameStart();
    }  
-   if (game.GameRunning == true && mouseX > 300){
+   if (game.GameRunning == true && mouseX>145 && mouseX<255 && mouseY>280 && mouseY<325){
+     game.dealt = true;
    }
 
  }
