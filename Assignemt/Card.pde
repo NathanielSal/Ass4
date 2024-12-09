@@ -5,10 +5,5 @@ class Card{
  Card(int t, int v){
    type = t;
    value = v;
-   
-   
- }
- 
-
-  
+ } 
 }
