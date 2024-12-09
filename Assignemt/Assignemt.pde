@@ -1,22 +1,24 @@
 Game game;
-ArrayList<Deck> CardList = new ArrayList<Deck>();
+ArrayList<Card> Deck = new ArrayList<Card>();
+ArrayList<Card> Pcards = new ArrayList<Card>();
+ArrayList<Card> Dcards = new ArrayList<Card>();
 PImage Dealer;
-PImage cardIMG;
 
-int type = 4;
-int value = 13;
+
+
+
 void setup(){
   size(400,400);
   background(0,0,255);
   game = new Game();
   
-  for (int i = 0; i<type; i++){
-    for (int j = 0; j<value; j++){
+  for (int i = 0; i<4; i++){
+    for (int j = 0; j<13; j++){
        
-     Deck Card = new Deck(i,j);
+     Card Card = new Card(i,j);
       Card.cardIMG = loadImage((j+1)+"-"+i+".png");
       
-      CardList.add(Card);
+      Deck.add(Card);
     }
   }
   
@@ -25,11 +27,7 @@ void setup(){
   
 }
 void draw(){
- if (game.dealt == true){ 
-  for (Deck C : CardList){
-    C.deal();
-  }
-}
+
 }
 
  void mousePressed(){
@@ -37,8 +35,12 @@ void draw(){
    if (game.MenuUp == true && mouseX>145 && mouseX<255 && mouseY>180 && mouseY<225 ){
       game.GameStart();
    }  
-   if (game.GameRunning == true && mouseX>145 && mouseX<255 && mouseY>280 && mouseY<325){
-     game.dealt = true;
+   if (game.GameRunning == true && mouseX>290 && mouseX<400 && mouseY>255 && mouseY<295){
+     game.deal(true);
    }
+   if (game.GameRunning == true && mouseX>290 && mouseX<400 && mouseY>295 && mouseY<335){
+     game.deal(false);
+      
 
+ }
  }
